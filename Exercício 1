@@ -1,0 +1,17 @@
+import 'dart:io';
+
+void main() {
+  List<int> n = List<int>.filled(10, 0);
+  
+  int valor = int.parse(stdin.readLineSync()!);
+  
+  n[0] = valor;
+  
+  for (int i = 1; i < 10; i++) {
+    n[i] = n[i - 1] * 2;
+  }
+  
+  for (int i = 0; i < 10; i++) {
+    print('N[$i] = ${n[i]}');
+  }
+}
