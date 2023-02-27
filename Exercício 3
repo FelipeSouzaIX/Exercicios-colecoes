@@ -1,0 +1,24 @@
+import 'dart:io';
+
+void main() {
+  List<int> pares = [];
+  List<int> impares = [];
+  
+  for (int i = 0; i < 10; i++) {
+    int valor = int.parse(stdin.readLineSync()!);
+    
+    if (valor % 2 == 0) {
+      pares.add(valor);
+    } else {
+      impares.add(valor);
+    }
+  }
+  
+  for (int i = 0; i < impares.length; i++) {
+    print('impares[$i] = ${impares[i]}');
+  }
+  
+  for (int i = 0; i < pares.length; i++) {
+    print('pares[$i] = ${pares[i]}');
+  }
+}
